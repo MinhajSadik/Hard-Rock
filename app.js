@@ -5,8 +5,20 @@
 //     const res = await fetch(url);
 //     const data = await res.json();
 //     displaySongs(data.data);
-// }       
+// }    
 
+// document.getElementById('search-button').addEventListener('keyprees', function(event) {
+//     if(event.key === 'Enter'){
+//         documnent.getElementById('search-field').click();
+//     }
+// })
+
+
+document.getElementById('search-field').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        document.getElementById('search-button').click();
+    }
+})
 const searchSongs = () => {
     const searchText = document.getElementById('search-field').value;
     const url = `https://api.lyrics.ovh/suggest/${searchText}`
