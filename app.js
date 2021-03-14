@@ -1,17 +1,17 @@
-// const searchSongs = async () => {
-//     const searchText = document.getElementById('search-field').value;
-//     const url = `https://api.lyrics.ovh/suggest/${searchText}`
-//     // load data
-//     const res = await fetch(url);
-//     const data = await res.json();
-//     displaySongs(data.data);
-// }    
+const searchSongs = async () => {
+    const searchText = document.getElementById('search-field').value;
+    const url = `https://api.lyrics.ovh/suggest/${searchText}`
+    // load data
+    const res = await fetch(url);
+    const data = await res.json();
+    displaySongs(data.data);
+}    
 
-// document.getElementById('search-button').addEventListener('keyprees', function(event) {
-//     if(event.key === 'Enter'){
-//         documnent.getElementById('search-field').click();
-//     }
-// })
+document.getElementById('search-button').addEventListener('keyprees', function(event) {
+    if(event.key === 'Enter'){
+        documnent.getElementById('search-field').click();
+    }
+})
 
 
 document.getElementById('search-field').addEventListener('keypress', function (event) {
@@ -19,16 +19,16 @@ document.getElementById('search-field').addEventListener('keypress', function (e
         document.getElementById('search-button').click();
     }
 })
-const searchSongs = () => {
-    const searchText = document.getElementById('search-field').value;
-    const url = `https://api.lyrics.ovh/suggest/${searchText}`
-    // load data
-    toggleSpinner();
-    fetch(url)
-        .then(res => res.json())
-        .then(data => displaySongs(data.data))
-        .catch(error => displayError('Something Went Wrong!! Please try again later!'));
-}
+// const searchSongs = () => {
+//     const searchText = document.getElementById('search-field').value;
+//     const url = `https://api.lyrics.ovh/suggest/${searchText}`
+//     // load data
+//     toggleSpinner();
+//     fetch(url)
+//         .then(res => res.json())
+//         .then(data => displaySongs(data.data))
+//         .catch(error => displayError('Something Went Wrong!! Please try again later!'));
+// }
 
 
 const displaySongs = songs => {
