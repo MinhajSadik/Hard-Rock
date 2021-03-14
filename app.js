@@ -5,7 +5,7 @@ const searchSongs = async () => {
     const res = await fetch(url);
     const data = await res.json();
     displaySongs(data.data);
-}    
+}
 
 document.getElementById('search-button').addEventListener('keyprees', function(event) {
     if(event.key === 'Enter'){
